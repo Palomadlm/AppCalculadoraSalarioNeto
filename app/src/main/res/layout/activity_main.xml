@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/backgroundApp">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:background="@color/backgroundCampos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.050" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:text="@string/TituloApp"
+        android:textAlignment="center"
+        android:textColor="@color/epigrafesCampos"
+        android:textSize="10pt"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/salarioBrutoAnual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view"
+        app:layout_constraintVertical_bias="0.05"
+        android:text="@string/salario_bruto_anual"
+        android:textColor="@color/epigrafesCampos"
+        app:layout_constraintHorizontal_bias="0"
+        android:textSize="10pt"
+      />
+
+    <EditText
+        android:id="@+id/salarioBrutoDato"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintVertical_bias="0.030"
+        app:layout_constraintHorizontal_bias="0"
+        android:textColor="@color/datoCampos"/>
+
+    <TextView
+        android:id="@+id/numeroPagas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/salarioBrutoAnual"
+        app:layout_constraintVertical_bias="0.08"
+        android:text="@string/n_de_pagas"
+        android:textColor="@color/epigrafesCampos"
+        app:layout_constraintHorizontal_bias="0"
+        android:textSize="10pt"
+        />
+
+    <EditText
+        android:id="@+id/numeroPagasDato"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/salarioBrutoDato"
+        app:layout_constraintVertical_bias="0.045"
+        app:layout_constraintHorizontal_bias="0"
+        android:textColor="@color/datoCampos"/>
+
+    <TextView
+        android:id="@+id/edad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/edad"
+        android:textColor="@color/epigrafesCampos"
+        android:textSize="10pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@id/numeroPagas"
+        app:layout_constraintVertical_bias="0.10"
+        app:layout_constraintHorizontal_bias="0"/>
+
+    <EditText
+        android:id="@+id/edadDato"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/numeroPagasDato"
+        app:layout_constraintVertical_bias="0.055"
+        app:layout_constraintHorizontal_bias="0"
+        android:textColor="@color/datoCampos"/>
+
+    <TextView
+        android:id="@+id/grupoProfesional"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edad"
+        app:layout_constraintVertical_bias="0.11"
+        android:text="@string/grupo_profesional"
+        android:textColor="@color/epigrafesCampos"
+        app:layout_constraintHorizontal_bias="0"
+        android:textSize="10pt"
+        />
+
+    <EditText
+        android:id="@+id/grupoProfesionalDato"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:inputType="number"
+        android:textColor="@color/datoCampos"
+        android:hint="@string/_1_11"
+        android:textAlignment="center"
+        android:textColorHint="@color/hintCampos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/edadDato"
+        app:layout_constraintVertical_bias="0.075" />
+
+
+
+    <TextView
+        android:id="@+id/numeroHijos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/grupoProfesional"
+        app:layout_constraintVertical_bias="0.15"
+        android:text="@string/n_de_hijos"
+        android:textColor="@color/epigrafesCampos"
+        app:layout_constraintHorizontal_bias="0"
+        android:textSize="10pt"
+        />
+
+    <EditText
+        android:id="@+id/numeroHijosDato"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:inputType="number"
+        android:textColor="@color/datoCampos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/grupoProfesionalDato"
+        app:layout_constraintVertical_bias="0.11" />
+
+
+    <TextView
+        android:id="@+id/gradoDiscapacidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/grado_discapacidad"
+        android:textColor="@color/epigrafesCampos"
+        android:textSize="10pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintVertical_bias="0.65" />
+
+    <CheckBox
+        android:id="@+id/gradoDiscapacidadCheckBox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_33"
+        android:textSize="10pt"
+        android:textColor="@color/epigrafesCampos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gradoDiscapacidad"
+        app:layout_constraintVertical_bias="0.1" />
+
+
+    <CheckBox
+        android:id="@+id/gradoDiscapacidadCheckBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_65"
+        android:textSize="10pt"
+        android:textColor="@color/epigrafesCampos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gradoDiscapacidad"
+        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.750"/>
+
+
+    <TextView
+        android:id="@+id/estadoCivil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/estado_civil"
+        android:textColor="@color/epigrafesCampos"
+        android:textSize="10pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintVertical_bias="0.82" />
+
+
+    <EditText
+        android:id="@+id/estadoCivilDato"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="4dp"
+        android:hint="Soltero, Casado, Divorciado, Viudo"
+        android:textColorHint="@color/hintCampos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/estadoCivil"
+        app:layout_constraintVertical_bias="0.13" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/validarButton"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:textAlignment="center"
+        android:textColor="@color/epigrafesCampos"
+        android:textSize="10pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline3"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/backgroundCampos"
+        app:layout_constraintVertical_bias="0.985"
+        app:layout_constraintHorizontal_bias="0.85"/>
+
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/baseline_done_outline_24"
+        app:layout_constraintBottom_toBottomOf="@+id/validarButton"
+        app:layout_constraintEnd_toEndOf="@+id/validarButton"
+        app:layout_constraintStart_toStartOf="@+id/validarButton"
+        app:layout_constraintTop_toTopOf="@+id/validarButton" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="28dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="275dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

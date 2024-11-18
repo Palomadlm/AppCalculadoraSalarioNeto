@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultActivity"
+    android:background="@color/backgroundApp">
+
+
+    <View
+        android:id="@+id/viewResultados"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:background="@color/backgroundCampos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.070" />
+
+    <TextView
+        android:id="@+id/textViewResultados"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:text="@string/resultados"
+        android:textAlignment="center"
+        android:textColor="@color/epigrafesCampos"
+        android:textSize="10pt"
+        app:layout_constraintBottom_toBottomOf="@+id/viewResultados"
+        app:layout_constraintEnd_toEndOf="@+id/viewResultados"
+        app:layout_constraintStart_toStartOf="@+id/viewResultados"
+        app:layout_constraintTop_toTopOf="@+id/viewResultados" />
+
+    <TextView
+        android:id="@+id/mostarSalarioBruto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/salario_bruto"
+
+        android:textColor="@color/epigrafesCampos"
+        android:textSize="10pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <TextView
+        android:id="@+id/SalarioBrutoResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Texto de prueba"
+        android:textColor="@color/epigrafesCampos"
+        android:textSize="10pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25" />
+    <TextView
+        android:id="@+id/mostarSalarioNeto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/salario_neto"
+        android:textColor="@color/epigrafesCampos"
+        android:textSize="10pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/mostarSalarioBruto"
+        app:layout_constraintVertical_bias="0.15" />
+
+    <TextView
+        android:id="@+id/SalarioNetoResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/epigrafesCampos"
+        android:textSize="10pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toBottomOf="@+id/SalarioBrutoResultado"
+        app:layout_constraintVertical_bias="0.15"
+        tools:text="Texto de prueba" />
+    <TextView
+        android:id="@+id/mostarRetencionIRPF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/retenci_n_irpf"
+        android:textColor="@color/epigrafesCampos"
+        android:textSize="10pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/mostarSalarioNeto"
+        app:layout_constraintVertical_bias="0.19" />
+
+    <TextView
+        android:id="@+id/RetencionIRPFResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/epigrafesCampos"
+        android:textSize="10pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toBottomOf="@+id/SalarioNetoResultado"
+        app:layout_constraintVertical_bias="0.19"
+        tools:text="Texto de prueba" />
+
+    <TextView
+        android:id="@+id/Deducciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/deducciones"
+        android:textColor="@color/epigrafesCampos"
+        android:textSize="10pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/mostarRetencionIRPF"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <TextView
+        android:id="@+id/DeduccionesResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/epigrafesCampos"
+        android:textSize="10pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toBottomOf="@+id/RetencionIRPFResultado"
+        app:layout_constraintVertical_bias="0.25"
+        tools:text="Texto de prueba" />
+
+    <Button
+        android:id="@+id/volverButton"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:text="@string/volver_a_la_calculadora"
+        android:background="@color/backgroundCampos"
+        android:textColor="@color/epigrafesCampos"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.93"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="28dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="221dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
